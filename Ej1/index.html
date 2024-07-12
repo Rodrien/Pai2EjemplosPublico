@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#shake">Shake</a></li>
+                <li><a href="#transicion">Transición</a></li>
+                <li><a href="#accion">Acción</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="banner"></div>
+    </section>
+
+    <section id="shake">
+        <h2>SHAKE</h2>
+        <div class="rectangle yellow"></div>
+        <p>Este objeto amarillo dice que no.</p>
+        <div class="rectangle blue"></div>
+        <p>Este objeto azul dice que si.</p>
+    </section>
+
+    <section id="transicion">
+        <h2>TRANSICIÓN</h2>
+        <div class="rectangle red"></div>
+        <p>Pase el mouse sobre este objeto y crecerá del 50% al 100% en 10 segundos.</p>
+    </section>
+
+    <section id="accion">
+        <h2>ACCIÓN</h2>
+        <div class="rectangle green"></div>
+    </section>
+
+    <section id="contacto">
+        <h2>CONTACTO</h2>
+        <div class="contact-wrapper">
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Comentario" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Nombre Apellido | PAI 2 <a href="http://www.fadu.edu.uy/pai-ii">FADU</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

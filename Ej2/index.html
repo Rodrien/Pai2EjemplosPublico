@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="menu-container">
+      <a onclick="goToInicio()" id="inicio-ref">Inicio</a>
+      <a onclick="goToShake()" id="shake-ref">Shake</a>
+      <a onclick="goToTransicion()" id="transicion-ref">Transicion</a>
+      <a onclick="goToAccion()" id="accion-ref">Accion</a>
+      <a onclick="goToContacto()" id="contacto-ref">Contacto</a>
+    </div>
+  </header>
+  <div class="main-container">
+
+    <!-- INICIO -->
+    <div id="inicio-div" class="inicio show">
+      <p> hola</p>
+    </div>
+
+    <!-- SHAKE -->
+    <div id="shake-div" class="hide">
+      <div id="shake-container" class="container">
+        <h1>SHAKE</h1>
+        <div class="shake-horizontal">
+
+        </div>
+        <p class="text-shake">Este objeto amarillo dice que no.</p>
+        <div class="shake-vertical">
+
+        </div>
+        <p class="text-shake">Este objeto azul dice que si</p>
+
+      </div>
+    </div>
+
+    <!-- TRANSICION -->
+    <div id="transicion-div" class="hide">
+      <div class="container">
+        <h1>TRANSICION</h1>
+        <div class="transition-component">
+
+        </div>
+        <p class="text-shake">Pase el mouse sobre este objeto y crecerá del
+          50% al 100% en 10 segundos.
+        </p>
+      </div>
+    </div>
+
+    <!-- ACCION -->
+    <div id="accion-div" class="hide">
+      <div class="container">
+        <h1>ACCION</h1>
+        <div id="elemento-accion" onclick="cambiarElementoAccion()" class="accion-component">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div id="contacto-div" class="container hide">
+      <div class="container">
+        <h1>Contacto</h1>
+      </div>
+      <div class="two-columns">
+        <div class="column">
+          <form>
+            <h2>Formulario</h2>
+            <div class="form-container">
+              <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="" id="nombre">
+              </div>
+
+              <div>
+                <label for="nombre">Apellido</label>
+                <input type="text" name="" id="nombre">
+              </div>
+
+              <div>
+                <label for="nombre">Direccion</label>
+                <input type="text" name="" id="nombre">
+              </div>
+              <div>
+                <input type="submit" class="button-submit" value="Enviar" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="column">
+          <!-- <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Fing,%20montevideo+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+              href="https://www.gps.ie/">gps tracker sport</a></iframe> -->
+
+          <iframe width="100%" height="100%"
+            src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;coord=-34.90328,-56.18816&amp;q=Facultad+de+Arquitectura,+Diseño+y+Urbanismo&amp;ie=UTF8&amp;t=&amp;z=18&amp;iwloc=B&amp;output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br />
+        </div>
+      </div>
+      <footer class="footer">
+        <a>Nombre aqui | PAI 2</a>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  let inicioDiv = document.getElementById('inicio-div')
+  let shakeDiv = document.getElementById('shake-div')
+  let transicionDiv = document.getElementById('transicion-div')
+  let accionDiv = document.getElementById('accion-div')
+  let contactoDiv = document.getElementById('contacto-div')
+
+  let goToInicio = () => {
+
+    inicioDiv.classList.remove('hide')
+    inicioDiv.classList.add('show')
+
+    shakeDiv.classList.add('hide')
+    shakeDiv.classList.remove('show')
+
+    transicionDiv.classList.add('hide')
+    transicionDiv.classList.remove('show')
+
+    accionDiv.classList.add('hide')
+    accionDiv.classList.remove('show')
+
+    contactoDiv.classList.add('hide')
+    contactoDiv.classList.remove('show')
+  };
+
+  let goToShake = () => {
+    shakeDiv.classList.remove('hide')
+    shakeDiv.classList.add('show')
+
+    inicioDiv.classList.add('hide')
+    inicioDiv.classList.remove('show')
+
+    transicionDiv.classList.add('hide')
+    transicionDiv.classList.remove('show')
+
+    accionDiv.classList.add('hide')
+    accionDiv.classList.remove('show')
+
+    contactoDiv.classList.add('hide')
+    contactoDiv.classList.remove('show')
+  };
+
+  let goToTransicion = () => {
+    transicionDiv.classList.remove('hide')
+    transicionDiv.classList.add('show')
+
+    inicioDiv.classList.add('hide')
+    inicioDiv.classList.remove('show')
+
+    shakeDiv.classList.add('hide')
+    shakeDiv.classList.remove('show')
+
+    accionDiv.classList.add('hide')
+    accionDiv.classList.remove('show')
+
+    contactoDiv.classList.add('hide')
+    contactoDiv.classList.remove('show')
+  };
+
+  let goToAccion = () => {
+    accionDiv.classList.remove('hide')
+    accionDiv.classList.add('show')
+
+    inicioDiv.classList.add('hide')
+    inicioDiv.classList.remove('show')
+
+    transicionDiv.classList.add('hide')
+    transicionDiv.classList.remove('show')
+
+    shakeDiv.classList.add('hide')
+    shakeDiv.classList.remove('show')
+
+    contactoDiv.classList.add('hide')
+    contactoDiv.classList.remove('show')
+  };
+
+  let goToContacto = () => {
+    contactoDiv.classList.remove('hide')
+    contactoDiv.classList.add('show')
+
+    inicioDiv.classList.add('hide')
+    inicioDiv.classList.remove('show')
+
+    transicionDiv.classList.add('hide')
+    transicionDiv.classList.remove('show')
+
+    accionDiv.classList.add('hide')
+    accionDiv.classList.remove('show')
+
+    shakeDiv.classList.add('hide')
+    shakeDiv.classList.remove('show')
+  };
+
+  let cambiarElementoAccion = () => {
+    let elemento = document.getElementById("elemento-accion")
+
+    if (elemento.classList.contains('accion-elemento')) {
+      elemento.classList.remove('accion-elemento')
+    }
+    else {
+      elemento.classList.add('accion-elemento')
+    }
+  }
+</script>
